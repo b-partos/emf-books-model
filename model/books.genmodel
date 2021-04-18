@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/com.partosb.emf.books/src" editDirectory="/com.partosb.emf.books/src"
+    editorDirectory="/com.partosb.emf.books.editor/src-gen" modelPluginID="com.partosb.emf.books"
+    modelName="Books" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>books.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Books" basePackage="com.partosb.emf" disposableProviderFactory="true"
+      ecorePackage="books.ecore#/">
+    <genClasses ecoreClass="books.ecore#//Book">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute books.ecore#//Book/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute books.ecore#//Book/isbn"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference books.ecore#//Book/authors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference books.ecore#//Book/publisher"/>
+    </genClasses>
+    <genClasses ecoreClass="books.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute books.ecore#//Person/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute books.ecore#//Person/lastName"/>
+    </genClasses>
+    <genClasses ecoreClass="books.ecore#//Publisher">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute books.ecore#//Publisher/name"/>
+    </genClasses>
+    <genClasses ecoreClass="books.ecore#//Root">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference books.ecore#//Root/people"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference books.ecore#//Root/books"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference books.ecore#//Root/publishers"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
